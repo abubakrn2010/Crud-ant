@@ -1,16 +1,13 @@
 
 import React from 'react'
-import Dialog from '@mui/material/Dialog'
-import DialogContent from '@mui/material/DialogContent'
+import { Modal } from 'antd'
 
-const Modal = ({ open, children }) => {
+const MyModal = ({ open, children }) => {
     return (
-        <Dialog open={open} maxWidth="sm" fullWidth>
-            <DialogContent sx={{ p: 3 }}>
-                {children}
-            </DialogContent>
-        </Dialog>
+        <Modal open={open} footer={null}>
+            {children}
+        </Modal>
     )
 }
 
-export default Modal
+export default MyModal
