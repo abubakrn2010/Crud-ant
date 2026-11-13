@@ -31,7 +31,7 @@ const Get = () => {
         const newuser = {
        id: Date.now(),
        name: event.target.inpname.value,
-       age: Number(event.target.inpage.value),
+       age: event.target.inpage.value,
        job: event.target.inpjob.value,
        img: event.target.inpimg.value || "https://i.pravatar.cc/150",
        status: event.target.inpstatus.value === "true"
@@ -47,7 +47,7 @@ const Get = () => {
         setageinp(user.age)
         setjobinp(user.job)
         setimginp(user.img)
-        setstatusinp(String(user.status))
+        setstatusinp(user.status)
         setidx(user.id)
         setmodaledit(true)
     }
@@ -58,7 +58,7 @@ const Get = () => {
         const newuser = {
        id: idx,
        name: event.target.inpname.value,
-       age: Number(event.target.inpage.value),
+       age: event.target.inpage.value,
        job: event.target.inpjob.value,
        img: event.target.inpimg.value || "https://i.pravatar.cc/150",
        status: event.target.inpstatus.value === "true"
